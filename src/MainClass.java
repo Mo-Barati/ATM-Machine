@@ -13,7 +13,9 @@ public class MainClass {
         System.out.print("Enter atm pin: ");
         atmpin = input.nextInt();
         if((atmnumber == atmNumber) && (atmpin == atmpin)) {
-            System.out.println("You have entered the same atm number");
+            while (true){
+                System.out.println("1. View Available Balance \n2. Withdraw Balance \n3. Deposit\n4. View Statement \n5. Exit");
+            }
         }
         else {
             System.out.println("You have entered the different atm number");
