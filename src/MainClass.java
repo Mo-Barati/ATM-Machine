@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class MainClass{
     public static void main(String[] args) {
+
+        AtmOperationInterface op = new AtmOperationImpl();
+
         int atmnumber = 12345;
         int atmpin = 123;
 
@@ -13,15 +16,19 @@ public class MainClass{
         atmpin = input.nextInt();
         if((atmnumber == atmNumber) && (atmpin == atmpin)) {
             while (true){
-                System.out.println("1. View Available Balance \n2. Withdraw Balance \n3. Deposit\n4. View Statement \n5. Exit");
+                System.out.println("1. View Available Balance \n2. Withdraw \n3. Deposit\n4. View Statement \n5. Exit");
                 System.out.println("Enter your choice: ");
                 int choice = input.nextInt();
                 switch(choice) {
                     case 1:
+                        op.viewBalance();
 
                     case 2:
 
                     case 3:
+                        System.out.println("Enter amount to deposit: ");
+                        double amount = input.nextDouble();
+                        op.depositMoney(amount);
 
                     case 4:
 
