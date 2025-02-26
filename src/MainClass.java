@@ -22,6 +22,7 @@ public class MainClass{
                 switch(choice) {
                     case 1:
                         op.viewBalance();
+                        break;
 
                     case 2:
                         System.out.println("Enter amount to withdraw: ");
@@ -37,6 +38,8 @@ public class MainClass{
                         break;
 
                     case 4:
+                        op.viewStatement();
+                        break;
 
                     case 5:
                         System.out.println("Collect your ATM Card \n Thank you for using ATM Machine.");
