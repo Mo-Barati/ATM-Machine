@@ -8,6 +8,13 @@ public class AtmOperationImpl implements AtmOperationInterface{
 
     @Override
     public void withdrawMoney(double amount) {
+        if (amount <= atm.getBalance()) {
+            System.out.println("Withdraw money: " + amount);
+            atm.setBalance(atm.getBalance() - amount);
+            viewBalance();
+        } else {
+            System.out.println("Insufficient balance");
+        }
 
     }
 

@@ -24,11 +24,17 @@ public class MainClass{
                         op.viewBalance();
 
                     case 2:
+                        System.out.println("Enter amount to withdraw: ");
+                        double withdraw = input.nextDouble();
+                        op.withdrawMoney(withdraw);
+                        break;
+
 
                     case 3:
                         System.out.println("Enter amount to deposit: ");
                         double amount = input.nextDouble();
                         op.depositMoney(amount);
+                        break;
 
                     case 4:
 
